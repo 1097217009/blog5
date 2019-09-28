@@ -36,4 +36,4 @@ class Post(models.Model):#正文
 		return reverse('blog:detail', kwargs={'pk':self.pk})
 	def increase_views(self):
 		self.views += 1
-		self.save(update_fileds=['views'])
+		self.save(update_fields=['views'])
