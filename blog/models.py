@@ -27,7 +27,7 @@ class Post(models.Model):#正文
 	category = models.ForeignKey(Category,  on_delete=models.PROTECT)
 	tags = models.ManyToManyField(Tag, blank=True)
 	author = models.ForeignKey(User,  on_delete=models.PROTECT)
-	views = models.PositiveIntegerField(default=0)
+	views = models.PositiveIntegerField(default=10)
 	body = models.TextField()
 	excerpt = models.CharField(max_length=200, blank=True)
 	def __str__(self):
